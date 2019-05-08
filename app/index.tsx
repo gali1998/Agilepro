@@ -1,8 +1,11 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { Header } from "./Components/Header/Header";
+import {BrowserRouter as Router} from "react-router-dom";
+import {BaseComponent} from "./Components/BaseComponent/BaseComponent";
 
 ReactDOM.render(
-    <Header/>,
+  <Router>
+  <BaseComponent />
+</Router>,
     document.getElementById("app")
 );
