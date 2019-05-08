@@ -18,19 +18,12 @@ module.exports = {
                 loader: 'ts-loader',
                 exclude: /node_modules/,
             },{
-                test: /.css$/,
-                use: [ 
-                { loader: 'style-loader' },
-                // css-loader
-                {
-                  loader: 'css-loader',
-                  options: {
-                    modules: true
-                  }
-                },
-                // sass-loader
-                { loader: 'sass-loader' }
-              ]
+                test: /\.scss$/,
+            use: [
+                "style-loader", // creates style nodes from JS strings
+                "css-loader", // translates CSS into CommonJS
+                "sass-loader" // compiles Sass to CSS, using Node Sass by default
+            ]
             }
         ]
     },
